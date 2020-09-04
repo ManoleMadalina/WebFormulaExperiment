@@ -315,9 +315,11 @@ h1 {
 
 .offers {
   height: 100vh;
+}
+.offers-inner {
+  padding: 20px 0 0;
   position: relative;
 }
-
 .offers-shape1 {
   position: absolute;
   top: 0;
@@ -330,10 +332,6 @@ h1 {
   top: 18%;
   right: 0;
   z-index: 100;
-}
-
-.offers-inner {
-  padding: 20px 0 0;
 }
 
 h2 {
