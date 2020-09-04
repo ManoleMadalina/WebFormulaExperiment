@@ -296,6 +296,21 @@ h1 {
   z-index: 5;
 }
 
+.anim {
+  opacity: 0;
+}
+
+@keyframes anim1 {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .main {
     position: relative;
