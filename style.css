@@ -311,6 +311,165 @@ h1 {
   }
 }
 
+/********Offers*********/
+
+.offers {
+  height: 100vh;
+  position: relative;
+}
+
+.offers-shape1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.offers-shape2 {
+  position: absolute;
+  top: 18%;
+  right: 0;
+  z-index: 100;
+}
+
+.offers-inner {
+  padding: 20px 0 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 55px;
+  font-weight: normal;
+  background: -webkit-linear-gradient(#df42fe, #4a04d7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #a525be, 0 0 0.5em #a525be,
+    0 0 0.1em #a525be;
+}
+
+h2 span:nth-of-type(1) {
+  animation: blink linear infinite 2s;
+}
+
+h2 span:nth-of-type(2) {
+  animation: blink linear infinite 3s;
+}
+
+h2 span:nth-of-type(3) {
+  animation: blink linear infinite 4s;
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+.offers-content {
+  display: flex;
+}
+
+.offers-main {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.offer {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 12px auto;
+  z-index: 20;
+}
+
+.offer:nth-child(2),
+.offer:nth-child(4) {
+  margin-left: 16%;
+}
+
+.offer:nth-child(1),
+.offer:nth-child(3),
+.offer:nth-child(5) {
+  margin-left: 10%;
+}
+
+.offer-image {
+  width: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-img {
+  width: 100%;
+  min-width: 100px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.offer-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-30deg);
+  transition: 0.5s;
+}
+
+.offer-image:hover::before {
+  left: 110px;
+}
+
+.offer-text {
+  padding: 15px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+  color: #e25ce4;
+}
+
+.offer-description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #b6afcf;
+}
+
 @media screen and (max-width: 1024px) {
   .main {
     position: relative;
@@ -381,6 +540,13 @@ h1 {
   .pages {
     display: none;
   }
+  .offers {
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+  .offers-shape1 {
+    display: none;
+  }
 }
 
 .nav-active {
@@ -413,6 +579,16 @@ h1 {
 @media screen and (max-width: 815px) {
   .intro-content {
     margin-left: 40px;
+  }
+  .offers-shape2 {
+    display: none;
+  }
+  .offer {
+    width: 80%;
+  }
+  .offer:nth-child(2),
+  .offer:nth-child(4) {
+    margin-left: 20%;
   }
 }
 
@@ -447,6 +623,24 @@ h1 {
   }
   .intro-slogan2 {
     font-size: 26px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  .offer:nth-child(2),
+  .offer:nth-child(4) {
+    margin: 15px auto;
+  }
+  .offer:nth-child(1),
+  .offer:nth-child(3),
+  .offer:nth-child(5) {
+    margin: 15px auto;
+  }
+  .offer {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px auto;
   }
 }
 
