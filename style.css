@@ -154,6 +154,8 @@ p {
 .intro-inner {
   display: flex;
   padding-top: 86px;
+  position: relative;
+  height: 100%;
 }
 
 .intro-content {
